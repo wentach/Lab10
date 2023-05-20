@@ -1,0 +1,80 @@
+#grid{ 
+    display: grid;
+    grid-template-areas: 
+      "Blu Blu Blu Gre"
+      "Blu1 Re Yel Gre"
+      "Gree Gree Yel Gre"
+      "Oran Oran Oran Oran";
+    grid-template-rows: 30% 20% 30% 20%;  
+    grid-template-columns: 25% 25% 1fr 20%;
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+    height: 100vh;
+    /*margin: 0;*/
+  
+  }
+  @media(max-width: 545px) {
+    #grid { 
+      grid-template-areas: 
+        "Blu"
+        "Blu1"
+        "Re"
+        "Yel"
+        "Oran"
+        "Gre"
+        "Gree";
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+      grid-template-columns: 1fr;
+   }
+  }
+  @media(min-width: 950px) {
+    #grid { 
+      grid-template-areas: 
+      "Blu Blu Blu"
+      "Blu1 Re Yel"
+      "Gree Gree Yel"
+      "Oran Oran Oran"
+      "Gre Gre Gre";
+    grid-template-rows: 20% 20% 20% 20% 1fr;  
+    grid-template-columns: 25% 25% 1fr;
+   }
+  }
+  @media(min-width: 1200px){
+    #grid{ 
+    display: grid;
+    grid-template-areas: 
+      "Blu Blu Blu Gre"
+      "Blu1 Re Yel Gre"
+      "Gree Gree Yel Gre"
+      "Oran Oran Oran Oran";
+    grid-template-rows: 30% 20% 30% 20%;  
+    grid-template-columns: 25% 25% 1fr 20%;}}
+  
+  #Blue {
+    grid-area: Blu;
+    background-color: blue;
+    }
+    #Aqua {
+    grid-area: Blu1;
+    background-color: aqua;    
+    }
+  #Grey {
+    grid-area: Gre;
+    background-color: grey;
+    }
+  #Yel { 
+    grid-area: Yel;  
+    background-color: yellow;   
+    }
+  #Orange { 
+    grid-area: Oran; 
+    background-color: orange;
+    }
+  #Red { 
+    grid-area: Re;
+     background-color: red;
+    } 
+  #Gree { 
+    grid-area: Gree; 
+    background-color: green;
+    } 

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "Header Header Header"
+        "Nav Article Ads"
+        "Footer Footer Footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    background-color: gold;
+}
+
+nav{
+    padding: 1.2em;
+    background-color: rgb(178, 241, 28);
+}
+div {
+    padding: 1.2em;
+    background-color: rgb(236, 18, 18);
+}
+article {
+    padding: 1.2em;
+    background-color: rgb(62, 212, 24);
+}
+footer {
+    padding: 1.2em;
+    background-color: rgb(37, 35, 35);
+}
+header{
+    padding: 1.2em;
+    background-color: rgb(19, 207, 231);
+}
+@media all and (max-width: 991px) {
+    .container {
+        grid-template-areas:
+            "Header Header Header"
+            "Article Article Article"
+            "Ads Ads Ads"
+            "Nav Nav Nav"
+            "Footer Footer Footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .container {
+        grid-template-areas:
+            "Header Header"
+            "Nav Nav"
+            "Article Article"
+            "Ads Ads"
+            "Footer Footer";
+        grid-template-rows: 80px 80px 1fr 1fr 70px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 575px) {
+    .container {
+        grid-template-areas:
+            "Header"
+            "Nav"
+            "Article"
+            "Ads"
+            "Footer";
+        grid-template-rows: 80px 80px 1fr 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .container {
+        grid-template-areas:
+            "Header"
+            "Nav"
+            "Article"
+            "Ads"
+            "Footer";
+        grid-template-rows: 80px 1fr 1fr 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .container {
+        grid-template-areas:
+            "Header"
+            "Nav"
+            "Article"
+            "Ads"
+            "Footer";
+        grid-template-rows: 80px 1fr 1fr 1fr 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
